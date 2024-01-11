@@ -11,8 +11,7 @@ mod test {
           "value": 10.3
         }"#;
 
-        let message: TestMessage =
-            protobuf_json_mapping::parse_from_str(json).expect("failed to parse JSON");
+        let message: TestMessage = serde_json::from_str(json).expect("failed to parse JSON");
 
         assert_eq!(message.name, Some("test".to_string()));
         assert_eq!(message.value, Some(Value::FloatValue(10.3)));
