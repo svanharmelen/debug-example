@@ -17,7 +17,7 @@ fn main() {
         }
 
         fn oneof(&self, _oneof: &OneofDescriptor) -> Customize {
-            Customize::default().before("#[derive(::serde::Deserialize)]")
+            Customize::default().before("#[derive(::serde::Deserialize)]\n#[serde(untagged)]")
         }
     }
 
