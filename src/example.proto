@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TestMessage {
+    optional string name      = 1;
+
+    oneof value {
+      uint32   int_value    = 3;
+      uint64   long_value   = 4;
+      float    float_value  = 5;
+      double   double_value = 6;
+    }
+}

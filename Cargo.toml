@@ -1,0 +1,12 @@
+[package]
+name = "debug-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+protobuf = "3.3"
+protobuf-json-mapping = "3.3"
+
+[build-dependencies]
+protobuf = "3.3"
+protobuf-codegen = "3.3"
